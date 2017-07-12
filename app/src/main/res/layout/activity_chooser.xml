@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chooser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yashwanth.simplereminder.ChooserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#287c7c10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="SELECT DATE"
+                android:textSize="20dp" />
+
+            <com.example.yashwanth.simplereminder.CustomDatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/textView"
+                android:layout_margin="20dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/datePicker"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="11dp"
+                android:text="SELECT TIME"
+                android:textSize="20dp" />
+
+            <com.example.yashwanth.simplereminder.CustomTimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/textView2"
+
+
+                android:layout_margin="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timePicker"
+                android:id="@+id/messageText"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:textStyle="bold"
+                android:layout_marginTop="11dp"
+                android:text="ENTER THE MESSAGE"
+                android:textSize="20dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/messageText"
+                android:layout_marginLeft="13dp"
+                android:id="@+id/editMessage"
+                android:hint="What should I say..."
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="11dp"
+                android:ems="20"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/timePicker"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/timePicker"
+                android:layout_below="@+id/editMessage"
+                android:layout_marginTop="25dp"
+                android:onClick="setDateAndTime"
+                android:text="SELECT" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
