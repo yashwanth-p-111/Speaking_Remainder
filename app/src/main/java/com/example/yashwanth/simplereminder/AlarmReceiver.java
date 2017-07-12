@@ -12,10 +12,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
-/**
- * Created by Yashwanth on 14-May-17.
- */
-
 
 public class AlarmReceiver extends BroadcastReceiver {
 
@@ -34,7 +30,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         {
 
 
-                vib.vibrate(2000);
+                vib.vibrate(1500);
                 Intent intent1= new Intent(context,Speaker.class);
                 intent1.putExtra("speak_msg",message);
                 intent1.putExtra("hourly",hourly);
@@ -63,7 +59,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         PendingIntent pIntent=PendingIntent.getActivity(mContext, (int)System.currentTimeMillis(),intent,0);
 
         //buid a compatible notification builder
-        NotificationCompat.Builder builder=new NotificationCompat.Builder(mContext)
+        NotificationCompat.Builder builder =new NotificationCompat.Builder(mContext)
                                                 .setColor(ContextCompat.getColor(mContext,R.color.colorPrimaryDark))
                                                 .setSmallIcon(R.drawable.alarm)
                                                 .setContentTitle("Remainder...")
